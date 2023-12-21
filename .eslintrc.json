@@ -1,0 +1,6 @@
+{
+  "extends": ["prettier"],
+  "rules": {
+    "react/display-name": "off"
+  }
+}

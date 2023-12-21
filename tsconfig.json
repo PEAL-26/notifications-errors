@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "types": ["node", "jest"],
+    "declaration": true,
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "tests/*": ["tests/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
