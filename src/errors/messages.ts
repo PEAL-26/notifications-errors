@@ -1,19 +1,19 @@
-import { NotificationProps } from "../helpers/notification";
-import { HttpStatus } from "../enums/http-status";
+import { NotificationProps } from '../helpers/notification';
+import { HttpStatus } from '../enums/http-status';
 
 export const INTERNAL_SERVER_ERROR_MESSAGE =
-  "Ocorreu uma falha no sistema. Por favor, entre em contacto com o suporte ou tente mais tarde.";
+  'Ocorreu uma falha no sistema. Por favor, entre em contacto com o suporte ou tente mais tarde.';
 
 export const UNAUTHORIZED_MESSAGE =
-  "Acesso não autorizado, verifique suas credenciais. Se você continuar a ter problemas, entre em contacto com o suporte ou tente mais tarde.";
+  'Acesso não autorizado, verifique suas credenciais. Se você continuar a ter problemas, entre em contacto com o suporte ou tente mais tarde.';
 
 export const JSON_WEB_TOKEN_ERROR_MESSAGE =
-  "Token inválido. Se você continuar a ter problemas, entre em contacto com o suporte ou tente mais tarde.";
+  'Token inválido. Se você continuar a ter problemas, entre em contacto com o suporte ou tente mais tarde.';
 
 export function notFoundErrorMessage(entity: string) {
   return {
     message: `${entity} não existe.`,
-    name: "NotFound",
+    name: 'NotFound',
     code: HttpStatus.BAD_REQUEST,
   };
 }
@@ -21,7 +21,7 @@ export function notFoundErrorMessage(entity: string) {
 export function requiredPropertyErrorMessage(property: string) {
   return {
     message: `${property} obrigatório(a).`,
-    name: "Required",
+    name: 'Required',
     code: HttpStatus.BAD_REQUEST,
   };
 }
@@ -29,7 +29,7 @@ export function requiredPropertyErrorMessage(property: string) {
 export function deletedErrorMessage(entity: string) {
   return {
     message: `${entity} não existe.`,
-    name: "Deleted",
+    name: 'Deleted',
     code: HttpStatus.BAD_REQUEST,
   };
 }
@@ -37,7 +37,7 @@ export function deletedErrorMessage(entity: string) {
 export function existErrorMessage(entity: string) {
   return {
     message: `${entity} já existe na base de dados.`,
-    name: "Exists",
+    name: 'Exists',
     code: HttpStatus.BAD_REQUEST,
   };
 }
@@ -45,7 +45,7 @@ export function existErrorMessage(entity: string) {
 export function validationErrorMessage(props: NotificationProps) {
   return {
     message: `${props.property}: ${props.message}`,
-    name: "ValidationError",
+    name: 'ValidationError',
     code: HttpStatus.BAD_REQUEST,
   };
 }
@@ -53,7 +53,23 @@ export function validationErrorMessage(props: NotificationProps) {
 export function internalServerErrorMessage() {
   return {
     message: INTERNAL_SERVER_ERROR_MESSAGE,
-    name: "InternalServerError",
+    name: 'InternalServerError',
     code: HttpStatus.INTERNAL_SERVER_ERROR,
+  };
+}
+
+export function unauthorizedErrorMessage() {
+  return {
+    message: UNAUTHORIZED_MESSAGE,
+    name: 'Unauthorized',
+    code: HttpStatus.UNAUTHORIZED,
+  };
+}
+
+export function jwtErrorMessage() {
+  return {
+    message: JSON_WEB_TOKEN_ERROR_MESSAGE,
+    name: 'JsonWebTokenError',
+    code: HttpStatus.BAD_REQUEST,
   };
 }
