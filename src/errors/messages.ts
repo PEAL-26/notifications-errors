@@ -42,6 +42,14 @@ export function existErrorMessage(entity: string) {
   };
 }
 
+export function notActiveErrorMessage(entity: string) {
+  return {
+    message: `${entity} não activo(a).`,
+    name: 'NotActive',
+    code: HttpStatus.BAD_REQUEST,
+  };
+}
+
 export function validationErrorMessage(props: NotificationProps) {
   return {
     message: `${props.property}: ${props.message}`,

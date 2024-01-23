@@ -12,6 +12,7 @@ import {
   deletedErrorMessage,
   existErrorMessage,
   internalServerErrorMessage,
+  notActiveErrorMessage,
   notFoundErrorMessage,
   requiredPropertyErrorMessage,
   validationErrorMessage,
@@ -80,6 +81,13 @@ export class DeletedError extends ErrorCustom {
   constructor(entity = '') {
     super();
     this.errors.push(deletedErrorMessage(entity));
+  }
+}
+
+export class NotActiveError extends ErrorCustom {
+  constructor(entity = '') {
+    super();
+    this.errors.push(notActiveErrorMessage(entity));
   }
 }
 
