@@ -1,6 +1,6 @@
 {
   "name": "notifications-errors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple and flexible library to facilitate validation of an entity's properties in Node.js projects, especially those built with NestJS.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
